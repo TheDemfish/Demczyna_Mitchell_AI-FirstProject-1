@@ -441,6 +441,7 @@ GameObject:
   - component: {fileID: 1376679145}
   - component: {fileID: 1376679144}
   - component: {fileID: 1376679146}
+  - component: {fileID: 1376679147}
   m_Layer: 0
   m_Name: FSMCube
   m_TagString: Untagged
@@ -550,11 +551,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
-  _serializedBlackboard: '{"_variables":{"newAnimation":{"_name":"newAnimation","_id":"3023b39d-1b39-4448-b24d-bd82368b2404","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Animation,
+  _serializedBlackboard: '{"_variables":{"Hop":{"_name":"Hop","_id":"798482ae-89bb-49d0-89e8-b75efde21d7f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Animation,
     UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences: []
   _serializedVariables:
-  - _json: '{"_name":"newAnimation","_id":"3023b39d-1b39-4448-b24d-bd82368b2404","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Animation,
+  - _json: '{"_name":"Hop","_id":"798482ae-89bb-49d0-89e8-b75efde21d7f","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Animation,
       UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references: []
 --- !u!114 &1376679145
@@ -573,7 +574,8 @@ MonoBehaviour:
   _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"log":{"_value":"Hello,
     welcome to my shop!"},"secondsToRun":5.0,"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Start","_position":{"x":163.2,"y":178.4},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"log":{"_value":"Would
     you like to buy something?"},"secondsToRun":5.0,"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Prompt","_position":{"x":323.2,"y":304.8},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"log":{"_value":"If
-    so, please click the mouse! If not... press space I guess"},"secondsToRun":7.0,"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Task","_position":{"x":256.5598,"y":394.3227},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"animationClip":{"_value":1},"overrideAgent":{"_type":"UnityEngine.Animation","_name":"newAnimation","_targetVariableID":"3023b39d-1b39-4448-b24d-bd82368b2404"},"$type":"NodeCanvas.Tasks.Actions.PlayAnimationSimple"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Happy","_position":{"x":435.5904,"y":544.9578},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"key":276,"$type":"NodeCanvas.Tasks.Conditions.CheckKeyboardInput"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+    so, please press space If not... press space I guess"},"secondsToRun":5.0,"$type":"NodeCanvas.Tasks.Actions.DebugLogText"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Task","_position":{"x":256.5598,"y":394.3227},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"animationClip":{"_value":1},"animationWrap":1,"$type":"NodeCanvas.Tasks.Actions.PlayAnimationSimple"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Happy
+    Animation","_position":{"x":363.7174,"y":542.3124},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.CheckKeyboardInput"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 7400000, guid: 4c4667a3e2b38234fbdc8b4518ff2e28, type: 2}
@@ -581,8 +583,8 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -202.5675, y: -97.26948}
-    _zoomFactor: 0.88622993
+    _translation: {x: -171.99817, y: -73.35553}
+    _zoomFactor: 0.80941457
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -613,6 +615,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &1376679147
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376679139}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 4c4667a3e2b38234fbdc8b4518ff2e28, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4c4667a3e2b38234fbdc8b4518ff2e28, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
